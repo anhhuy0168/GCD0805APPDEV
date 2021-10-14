@@ -183,6 +183,18 @@
     <Compile Include="Migrations\202110140752558_CreateCourseTable.Designer.cs">
       <DependentUpon>202110140752558_CreateCourseTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110140850212_CreateTraineeUser.cs" />
+    <Compile Include="Migrations\202110140850212_CreateTraineeUser.Designer.cs">
+      <DependentUpon>202110140850212_CreateTraineeUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110140853089_ModifyTraineeUser.cs" />
+    <Compile Include="Migrations\202110140853089_ModifyTraineeUser.Designer.cs">
+      <DependentUpon>202110140853089_ModifyTraineeUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110140859217_ModifyTrainee.cs" />
+    <Compile Include="Migrations\202110140859217_ModifyTrainee.Designer.cs">
+      <DependentUpon>202110140859217_ModifyTrainee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -190,6 +202,7 @@
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TraineeUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CourseCategoryViewModel.cs" />
@@ -280,6 +293,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110140752558_CreateCourseTable.resx">
       <DependentUpon>202110140752558_CreateCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110140850212_CreateTraineeUser.resx">
+      <DependentUpon>202110140850212_CreateTraineeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110140853089_ModifyTraineeUser.resx">
+      <DependentUpon>202110140853089_ModifyTraineeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110140859217_ModifyTrainee.resx">
+      <DependentUpon>202110140859217_ModifyTrainee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
