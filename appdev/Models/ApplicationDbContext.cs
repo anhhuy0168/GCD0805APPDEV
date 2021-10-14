@@ -10,6 +10,7 @@ namespace appdev.Models
         {
         }
         public DbSet<Category> Category { get; set; }
+        public DbSet<Course> Courses { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
