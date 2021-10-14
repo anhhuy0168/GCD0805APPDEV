@@ -1,0 +1,78 @@
+﻿@model IEnumerable<appdev.Models.TraineeUser>
+@using appdev.Utils;
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Trainee Informations</h2>
+
+
+@if (Request.IsAuthenticated && User.IsInRole(Role.Manager))
+{
+    using (Html.BeginForm("Index", "TraineeUsers", FormMethod.Get))
+    {
+        <p>
+            Find by name: @Html.TextBox("SearchString")
+            <input type="submit" value="Search" />
+        </p>
+    }
+
+    @Html.ActionLink("Add Trainee Profile", "Create")
+
+
+    <table class="table">
+        <tr>
+
+            <th>#</th>
+            <th>Personal Email</th>
+            <th>FullName</th>
+            <th>Age</th>
+            <th>Date Of Birth</th>
+            <th>Education</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </tr>
+        @foreach (var trainee in Model)
+        {
+            <tr>
+
+                <th>@trainee.ID</th>
+                <th>@trainee.Email</th>
+                <th>@trainee.Full_Name</th>
+                <th>@trainee.Age</th>
+                <th>@trainee.DateOfBirth</th>
+                <th>@trainee.Education</th>
+
+                <th>@Html.ActionLink("Edit", "Edit", new { id = trainee.ID })</th>
+                <th>@Html.ActionLink("Delete", "Delete", new { id = trainee.ID })</th>
+            </tr>
+        }
+    </table>
+}
+@if (User.IsInRole("Trainee"))
+{
+    <table class="table">
+        <tr>
+            <th>Personal Email</th>
+            <th>FullName</th>
+            <th>Education</th>
+            <th>Programming Language</th>
+            <th>Experience Details</th>
+            <th>Department</th>
+
+        </tr>
+        @foreach (var trainee in Model)
+        {
+            <tr>
+                <th>@trainee.Email</th>
+                <th>@trainee.Full_Name</th>
+                <th>@trainee.Education</th>
+
+                <th>@Html.ActionLink("Edit", "Edit", new { id = trainee.ID })</th>
+            </tr>
+        }
+    </table>
+}
+
+@Html.ActionLink("Back to home", "Index", "Home")

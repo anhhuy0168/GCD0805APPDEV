@@ -272,11 +272,13 @@
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Courses\Edit.cshtml" />
     <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\TraineeUsers\Index.cshtml" />
+    <Content Include="Views\TraineeUsers\Create.cshtml" />
+    <Content Include="Views\TraineeUsers\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Category\" />
-    <Folder Include="Views\TraineeUsers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
