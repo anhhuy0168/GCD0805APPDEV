@@ -1,0 +1,47 @@
+﻿@model IEnumerable<appdev.Models.Category>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Category</h2>
+
+<div class="form-group">
+    @Html.ActionLink("Create a new Category", "Create", "Categories", new { @class = "btn btn-primary" })
+</div>
+
+<form>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search Category by name" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+@*<ul>
+      <li>Id: @Model.Id</li>
+      <li>Description: @Model.Description</li>
+      <li>Due Date: @Model.DueDate.ToString("d")</li>
+    </ul>*@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+        <tr>
+            <th scope="row">@item.ID</th>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", "Categories", new { id = item.ID }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Edit", "Edit", "Categories", new { id = item.ID }, new { @class = "btn btn-success" })
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>
