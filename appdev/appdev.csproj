@@ -172,6 +172,7 @@
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TraineeUsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -205,7 +206,9 @@
     <Compile Include="Models\TraineeUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utils\Role.cs" />
     <Compile Include="ViewModels\CourseCategoryViewModel.cs" />
+    <Compile Include="ViewModels\TraineeUserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -273,6 +276,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Category\" />
+    <Folder Include="Views\TraineeUsers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
