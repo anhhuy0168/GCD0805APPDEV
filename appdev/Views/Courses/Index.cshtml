@@ -1,0 +1,56 @@
+﻿@model IEnumerable<appdev.Models.Course>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My Course</h2>
+
+<div class="form-group">
+    @Html.ActionLink("Create a new Course", "Create", "Courses", new { @class = "btn btn-primary" })
+    @Html.ActionLink("See Stats", "Stats", "Courses", null, new { @class = "btn btn-info" })
+
+</div>
+
+@using (Html.BeginForm("Index", "Courses", FormMethod.Get))
+{
+    <div class="form-group">
+        @Html.TextBox("searchString", null, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+}
+
+
+@*<ul>
+      <li>Id: @Model.Id</li>
+      <li>Description: @Model.Description</li>
+      <li>Due Date: @Model.DueDate.ToString("d")</li>
+    </ul>*@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Course Category</th>
+            <th scope="col">Course Decription</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in @Model)
+        {
+            <tr>
+                <th scope="row">@course.ID</th>
+                <td>@course.Name</td>
+                <td>@course.Category.Name</td>
+                <td>@course.Description</td>
+                <td>
+                <td>@Html.ActionLink("Edit", "Edit", new { id = course.ID })</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = course.ID })</td>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

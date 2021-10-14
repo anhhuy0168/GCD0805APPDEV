@@ -1,0 +1,32 @@
+﻿@model appdev.ViewModels.CourseCategoryViewModel
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@Html.AntiForgeryToken()
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+@using (Html.BeginForm())
+{
+
+    <div class="form-group">
+        @Html.LabelFor(co => co.Course.Name)
+        @Html.TextBoxFor(co => co.Course.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(co => co.Course.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(co => co.Course.Description)
+        @Html.TextBoxFor(co => co.Course.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(co => co.Course.Description)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(t => t.Course.Category.Name)
+        @Html.DropDownListFor(t => t.Course.CategoryID, new SelectList(Model.Categories, "ID", "Name"), "", new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-default">Create</button>
+}
+
+@Html.ActionLink("Back to List", "Index")
