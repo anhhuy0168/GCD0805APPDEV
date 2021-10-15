@@ -13,11 +13,11 @@
 
 @using (Html.BeginForm("EditTraineeAccount", "Staffs", FormMethod.Post))
 {
-    @Html.HiddenFor(i => i.TraineeID)
+    @Html.HiddenFor(i => i.TraineeId)
     @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
-        @Html.LabelFor(u => u.Full_Name)
-        @Html.EditorFor(u => u.Full_Name, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.LabelFor(u => u.FullName)
+        @Html.EditorFor(u => u.FullName, new { htmlAttributes = new { @class = "form-control" } })
     </div>
 
     <div class="form-group">

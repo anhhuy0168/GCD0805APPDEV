@@ -174,7 +174,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StaffsController.cs" />
-    <Compile Include="Controllers\TraineeUsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +209,10 @@
     <Compile Include="Migrations\202110150401233_TrainerTable.Designer.cs">
       <DependentUpon>202110150401233_TrainerTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110150536504_ModifyTraineeTable.cs" />
+    <Compile Include="Migrations\202110150536504_ModifyTraineeTable.Designer.cs">
+      <DependentUpon>202110150536504_ModifyTraineeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -226,7 +229,6 @@
     <Compile Include="ViewModels\CourseCategoryViewModel.cs" />
     <Compile Include="ViewModels\StaffAccountViewModels.cs" />
     <Compile Include="ViewModels\TraineeAccountViewModels.cs" />
-    <Compile Include="ViewModels\TraineeUserViewModel.cs" />
     <Compile Include="ViewModels\TrainerAccountViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -348,6 +350,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110150401233_TrainerTable.resx">
       <DependentUpon>202110150401233_TrainerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110150536504_ModifyTraineeTable.resx">
+      <DependentUpon>202110150536504_ModifyTraineeTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

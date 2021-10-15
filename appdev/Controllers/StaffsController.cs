@@ -46,7 +46,7 @@ namespace appdev.Controllers
             var role = _context.Roles.SingleOrDefault(n => n.Name == Role.Trainee);
 
             List<TraineeAccountViewModels> viewModel = _context.TraineeUsers
-                .GroupBy(u => u.Trainees, s => s.TraineeID)
+                .GroupBy(u => u.User, s => s.TraineeId)
                 .Select(res => new TraineeAccountViewModels
                 {
                     TraineeUsers = res.Key,
@@ -72,8 +72,8 @@ namespace appdev.Controllers
                 var traineeId = user.Id;
                 var newTrainee = new TraineeUser()
                 {
-                    TraineeID = traineeId,
-                    Full_Name = viewModel.Trainees.Full_Name,
+                    TraineeId = traineeId,
+                    FullName = viewModel.Trainees.FullName,
                     Age = viewModel.Trainees.Age,
                     DateOfBirth = viewModel.Trainees.DateOfBirth,
                     Education = viewModel.Trainees.Education
@@ -102,7 +102,7 @@ namespace appdev.Controllers
         [HttpGet]
         public ActionResult EditTraineeAccount(string id)
         {
-            var traineeInDb = _context.TraineeUsers.SingleOrDefault(u => u.TraineeID == id);
+            var traineeInDb = _context.TraineeUsers.SingleOrDefault(u => u.TraineeId == id);
             if (traineeInDb == null)
             {
                 return HttpNotFound();
@@ -117,13 +117,13 @@ namespace appdev.Controllers
             {
                 return View(trainee);
             }
-            var traineeInfoInDb = _context.TraineeUsers.SingleOrDefault(t => t.TraineeID == trainee.TraineeID);
+            var traineeInfoInDb = _context.TraineeUsers.SingleOrDefault(t => t.TraineeId == trainee.TraineeId);
 
             if (traineeInfoInDb == null)
             {
                 return HttpNotFound();
             }
-            traineeInfoInDb.Full_Name = trainee.Full_Name;
+            traineeInfoInDb.FullName = trainee.FullName;
             traineeInfoInDb.Age = trainee.Age;
             traineeInfoInDb.DateOfBirth = trainee.DateOfBirth;
             traineeInfoInDb.Education = trainee.Education;
@@ -136,7 +136,7 @@ namespace appdev.Controllers
         public ActionResult DeleteTraineeAccount(string id)
         {
             var traineeInDb = _context.Users.SingleOrDefault(i => i.Id == id);
-            var traineeInfoInDb = _context.TraineeUsers.SingleOrDefault(i => i.TraineeID == id);
+            var traineeInfoInDb = _context.TraineeUsers.SingleOrDefault(i => i.TraineeId == id);
             if (traineeInDb == null || traineeInfoInDb == null)
             {
                 return HttpNotFound();
@@ -153,7 +153,7 @@ namespace appdev.Controllers
             var traineeId = User.Identity.GetUserId();
 
             var traineeInfoInDb = _context.TraineeUsers
-                .SingleOrDefault(t => t.TraineeID == id);
+                .SingleOrDefault(t => t.TraineeId == id);
 
             if (traineeInfoInDb == null)
             {
