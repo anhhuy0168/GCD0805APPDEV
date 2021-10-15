@@ -196,6 +196,10 @@
     <Compile Include="Migrations\202110140859217_ModifyTrainee.Designer.cs">
       <DependentUpon>202110140859217_ModifyTrainee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110150220195_CreateStaffTable.cs" />
+    <Compile Include="Migrations\202110150220195_CreateStaffTable.Designer.cs">
+      <DependentUpon>202110150220195_CreateStaffTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -203,6 +207,7 @@
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\TraineeUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -308,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110140859217_ModifyTrainee.resx">
       <DependentUpon>202110140859217_ModifyTrainee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110150220195_CreateStaffTable.resx">
+      <DependentUpon>202110150220195_CreateStaffTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
