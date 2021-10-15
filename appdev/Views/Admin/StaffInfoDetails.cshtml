@@ -1,0 +1,22 @@
+﻿@model appdev.Models.Staff
+@{
+    ViewBag.Title = "Staff Info Details";
+}
+
+<div class="page-header">
+    <h2 style="margin-bottom: 15px">Staff Info Deatils</h2>
+</div>
+
+<div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+    <div class="form-group">
+        @Html.ActionLink("Back to Staff List ", "IndexStaff", "Admin", new { @class = "btn btn-primary" })
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p>Staff Full Name: @Model.FullName</p>
+        <p>Staff Age: @Model.Age</p>
+        <p>Staff Address: @Model.Address</p>
+    </div>
+</div>

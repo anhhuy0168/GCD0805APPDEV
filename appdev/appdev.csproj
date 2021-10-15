@@ -298,10 +298,17 @@
     <Content Include="Views\Staffs\EditTraineeAccount.cshtml" />
     <Content Include="Views\Staffs\CreateTraineeAccount.cshtml" />
     <Content Include="Views\Staffs\TraineeInfoDetails.cshtml" />
+    <Content Include="Views\Admin\IndexStaff.cshtml" />
+    <Content Include="Views\Admin\CreateStaffAccount.cshtml" />
+    <Content Include="Views\Admin\EditStaffAccount.cshtml" />
+    <Content Include="Views\Admin\StaffInfoDetails.cshtml" />
+    <Content Include="Views\Admin\IndexTrainer.cshtml" />
+    <Content Include="Views\Admin\CreateTrainerAccount.cshtml" />
+    <Content Include="Views\Admin\EditTrainerAccount.cshtml" />
+    <Content Include="Views\Admin\TrainerInfoDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Admin\" />
     <Folder Include="Views\Category\" />
   </ItemGroup>
   <ItemGroup>
