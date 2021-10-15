@@ -9,7 +9,7 @@
 
 <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
     <div class="form-group">
-        @Html.ActionLink("Create a New Trainer", "CreateTrainerAccount", "Admin", new { @class = "btn btn-primary" })
+        @Html.ActionLink("Create a New Trainer", "CreateTrainerAccount", "Admins", new { @class = "btn btn-primary" })
     </div>
 </div>
 
@@ -29,10 +29,10 @@
                 <td style="vertical-align: middle" scope="row">#</td>
                 @*<td style="vertical-align: middle">@item.Staffs.FullName</td>*@
                 <td>
-                    @Html.ActionLink("Edit Trainer Info", "EditTrainerAccount", "Admin", new { id = @item.TrainerUsers.Id }, new { @class = "btn btn-primary" })
-                    @Html.ActionLink("Delete Trainer", "DeleteTrainerAccount", "Admin", new { id = @item.TrainerUsers.Id }, new { @class = "btn btn-primary" })
-                    @Html.ActionLink("Password Reset", "TrainerPasswordReset", "Admin", new { id = @item.TrainerUsers.Id }, new { @class = "btn btn-primary" })
-                    @Html.ActionLink("Trainer Details", "TrainerInfoDetails", "Admin", new { id = @item.TrainerUsers.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Edit Trainer Info", "EditTrainerAccount", "Admins", new { id = @item.TrainerUsers.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Delete Trainer", "DeleteTrainerAccount", "Admins", new { id = @item.TrainerUsers.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Password Reset", "TrainerPasswordReset", "Admins", new { id = @item.TrainerUsers.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Trainer Details", "TrainerInfoDetails", "Admins", new { id = @item.TrainerUsers.Id }, new { @class = "btn btn-primary" })
                 </td>
             </tr>
         }

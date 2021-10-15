@@ -14,19 +14,19 @@ using System.Web.Mvc;
 namespace appdev.Controllers
 {
     [Authorize(Roles = Role.Admin)]
-    public class AdminController : Controller
+    public class AdminsController : Controller
     {
         //tao ket noi
         private ApplicationDbContext _context;
 
         private ApplicationUserManager _userManager;
 
-        public AdminController()
+        public AdminsController()
         {
             _context = new ApplicationDbContext();
         }
 
-        public AdminController(ApplicationUserManager userManager)
+        public AdminsController(ApplicationUserManager userManager)
         {
             _context = new ApplicationDbContext();
             UserManager = userManager;

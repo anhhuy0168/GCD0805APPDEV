@@ -7,11 +7,11 @@
 
 <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
     <div class="form-group">
-        @Html.ActionLink("Back to Trainer List ", "IndexTrainer", "Admin", new { @class = "btn btn-primary" })
+        @Html.ActionLink("Back to Trainer List ", "IndexTrainer", "Admins", new { @class = "btn btn-primary" })
     </div>
 </div>
 
-@using (Html.BeginForm("CreateTrainerAccount", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@using (Html.BeginForm("CreateTrainerAccount", "Admins", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
     <h4>Create a new trainer account.</h4>
