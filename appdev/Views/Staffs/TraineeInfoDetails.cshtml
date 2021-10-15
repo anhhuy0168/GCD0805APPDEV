@@ -1,0 +1,23 @@
+﻿@model appdev.Models.TraineeUser
+@{
+    ViewBag.Title = "TraineeInfoDetails";
+}
+
+<div class="page-header">
+    <h2 style="margin-bottom: 15px">Trainee Info Deatils</h2>
+</div>
+
+<div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+    <div class="form-group">
+        @Html.ActionLink("Back to Trainee List ", "IndexTrainee", "Staffs", new { @class = "btn btn-primary" })
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <p>Trainee Full Name: @Model.Full_Name</p>
+        <p>Trainee Age: @Model.Age</p>
+        <p>Trainee Date Of Birth: @Model.DateOfBirth.ToString("D")</p>
+        <p>Trainee Education: @Model.Education</p>
+    </div>
+</div>

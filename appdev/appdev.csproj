@@ -282,11 +282,14 @@
     <Content Include="Views\TraineeUsers\Index.cshtml" />
     <Content Include="Views\TraineeUsers\Create.cshtml" />
     <Content Include="Views\TraineeUsers\Edit.cshtml" />
+    <Content Include="Views\Staffs\IndexTrainee.cshtml" />
+    <Content Include="Views\Staffs\EditTraineeAccount.cshtml" />
+    <Content Include="Views\Staffs\CreateTraineeAccount.cshtml" />
+    <Content Include="Views\Staffs\TraineeInfoDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Category\" />
-    <Folder Include="Views\Staffs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
