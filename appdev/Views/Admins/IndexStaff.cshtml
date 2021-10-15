@@ -1,0 +1,40 @@
+﻿@model IEnumerable<appdev.ViewModels.StaffAccountViewModels>
+@{
+    ViewBag.Title = "IndexStaff";
+}
+
+<div class="page-header">
+    <h2 style="margin-bottom: 15px">List Of Staff Account</h2>
+</div>
+
+<div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+    <div class="form-group">
+        @Html.ActionLink("Create a New Staff", "CreateStaffAccount", "Admins", new { @class = "btn btn-primary" })
+    </div>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Staff Email</th>
+            <th scope="col">Staff FullName</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td style="vertical-align: middle" scope="row">@item.StaffUsers.Email</td>
+                <td style="vertical-align: middle" scope="row">#</td>
+                @*<td style="vertical-align: middle">@item.Staffs.FullName</td>*@
+                <td>
+                    @Html.ActionLink("Edit Staff Info", "EditStaffAccount", "Admins", new { id = @item.StaffUsers.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Delete Staff", "DeleteStaffAccount", "Admins", new { id = @item.StaffUsers.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Password Reset", "StaffPasswordReset", "Admins", new { id = @item.StaffUsers.Id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Staff Details", "StaffInfoDetails", "Admins", new { id = @item.StaffUsers.Id }, new { @class = "btn btn-primary" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

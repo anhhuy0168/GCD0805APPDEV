@@ -8,14 +8,17 @@ namespace appdev.ViewModels
 {
     public class StaffAccountViewModels
     {
-        public RegisterViewModel RegisterViewModels { get; set; }
+ 
+        
+            public RegisterViewModel RegisterViewModels { get; set; }
 
-        public Staff Staffs { get; set; }
+            public Staff Staffs { get; set; }
 
-        public List<Staff> GetStaffsInfo { get; set; }
+            public List<Staff> GetStaffsInfo { get; set; }
 
-        public ApplicationUser StaffUsers { get; set; }
+            public ApplicationUser StaffUsers { get; set; }
 
-        public List<ApplicationUser> GetStaffsUsers { get; set; }
+            public List<ApplicationUser> GetStaffsUsers { get; set; }
+        
     }
 }
