@@ -201,6 +201,14 @@
     <Compile Include="Migrations\202110150220195_CreateStaffTable.Designer.cs">
       <DependentUpon>202110150220195_CreateStaffTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110150359069_CreateTrainerTable.cs" />
+    <Compile Include="Migrations\202110150359069_CreateTrainerTable.Designer.cs">
+      <DependentUpon>202110150359069_CreateTrainerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110150401233_TrainerTable.cs" />
+    <Compile Include="Migrations\202110150401233_TrainerTable.Designer.cs">
+      <DependentUpon>202110150401233_TrainerTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -210,6 +218,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\TraineeUser.cs" />
+    <Compile Include="Models\TrainerUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utils\Role.cs" />
@@ -322,6 +331,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202110150220195_CreateStaffTable.resx">
       <DependentUpon>202110150220195_CreateStaffTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110150359069_CreateTrainerTable.resx">
+      <DependentUpon>202110150359069_CreateTrainerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110150401233_TrainerTable.resx">
+      <DependentUpon>202110150401233_TrainerTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

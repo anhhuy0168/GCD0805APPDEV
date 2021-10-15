@@ -13,6 +13,7 @@ namespace appdev.Models
         public DbSet<Course> Courses { get; set; }
         public DbSet<TraineeUser> TraineeUsers { get; set; }
         public DbSet<Staff> Staffs { get; set; }
+        public DbSet<TrainerUser> TrainersUsers { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
