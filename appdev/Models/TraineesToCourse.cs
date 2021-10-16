@@ -11,14 +11,12 @@ namespace appdev.Models
     {
         [Key, Column(Order = 1)]
         [ForeignKey("Trainee")]
-        public string TraineeId { get; set; }
+        public int TraineeId { get; set; }
+        public TraineeUser Trainee { get; set; }
 
         [Key, Column(Order = 2)]
         [ForeignKey("Course")]
         public int CourseId { get; set; }
-
-        public TraineeUser Trainee { get; set; }
-
         public Course Course { get; set; }
     }
 }

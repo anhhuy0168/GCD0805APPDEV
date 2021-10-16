@@ -7,13 +7,13 @@ namespace appdev.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class CreateStaffTable : IMigrationMetadata
+    public sealed partial class FixDatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateStaffTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(FixDatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "202110150220195_CreateStaffTable"; }
+            get { return "202110161144489_FixDatabase"; }
         }
         
         string IMigrationMetadata.Source

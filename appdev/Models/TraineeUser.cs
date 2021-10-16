@@ -10,6 +10,7 @@ namespace appdev.Models
     public class TraineeUser
     {
         [Key]
+        public int ID { get; set; }
         [ForeignKey("User")]
         //khoa ngoai vs bang user
         public string TraineeId { get; set; }
