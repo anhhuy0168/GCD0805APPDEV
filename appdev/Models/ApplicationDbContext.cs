@@ -14,6 +14,7 @@ namespace appdev.Models
         public DbSet<TraineeUser> TraineeUsers { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<TrainerUser> TrainersUsers { get; set; }
+        public DbSet<TraineesToCourse> TraineesToCourses { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
